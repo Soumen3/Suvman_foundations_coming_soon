@@ -22,24 +22,112 @@ const ComingSoon = () => {
 
       {/* Floating geometric shapes */}
       <div className="absolute top-20 left-10 w-20 h-20 border-2 border-green-400 rotate-45 animate-spin opacity-30" style={{ animationDuration: '10s' }} />
-      <div className="absolute top-40 right-20 w-16 h-16 bg-green-500 rounded-full animate-bounce opacity-40" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-100 right-12 w-16 h-16 bg-green-500 rounded-full animate-bounce opacity-40" style={{ animationDelay: '1s' }} />
       <div className="absolute bottom-32 left-1/4 w-12 h-12 border-2 border-emerald-400 animate-pulse opacity-30" />
       <div className="absolute bottom-20 right-10 w-24 h-24 border-2 border-green-300 rotate-12 animate-spin opacity-20" style={{ animationDuration: '15s' }} />
 
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-white px-4">
         {/* Main heading with gradient text animation */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 via-yellow-400 to-green-500 bg-clip-text text-transparent animate-pulse">
+        <div className="text-center mb-12 px-4">
+          {/* Main Title */}
+          <h1
+            className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl 
+                      font-extrabold leading-tight mb-1
+                      bg-gradient-to-r from-green-400 via-yellow-400 to-green-500 
+                      bg-clip-text text-transparent animate-pulse"
+            style={{ fontFamily: 'Shadows Into Light, cursive' }}
+          >
             Suvman Foundation
           </h1>
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-yellow-300 animate-pulse" style={{ animationDelay: '0.3s' }}>
-            Coming Soon
-          </h2>
-          <div className="w-32 h-1 bg-gradient-to-r from-green-400 to-yellow-400 mx-auto rounded-full animate-pulse" />
+
+          {/* Tagline */}
+          <p
+            className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 
+                      font-semibold mt-1 py-2
+                      bg-gradient-to-r from-green-400 to-yellow-300 
+                      bg-clip-text text-transparent animate-pulse"
+            style={{ animationDelay: '0.3s' }}
+          >
+            Building a better tomorrow, together
+          </p>
+
+          {/* Coming Soon Text */}
+          <div className="relative">
+            <h2
+              className="text-2xl sm:text-3xl md:text-5xl font-bold my-6 
+                        text-yellow-300 animate-pulse "
+              style={{ animationDelay: '0.6s' }}
+            >
+              {/* Shine icon positioned in top left corner */}
+              <svg 
+                className="absolute -top-1 left-10 
+                          w-10 h-10 sm:w-12 sm:h-12 md:w-20 md:h-20 
+                          text-white animate-pulse" 
+                style={{ 
+                  animationDelay: '0.3s',
+                  filter: 'drop-shadow(0 0 8px #fde047) drop-shadow(0 0 16px #fde047) drop-shadow(0 0 24px #fde047)'
+                }}
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 10000 12500" 
+                fill="white"
+              >
+                <defs>
+                  <filter id="glow">
+                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                    <feMerge> 
+                      <feMergeNode in="coloredBlur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+                <g filter="url(#glow)">
+                  <path d="M6663 5570c66,0 66,100 0,100 -1384,0 -2507,1123 -2507,2507 0,66 -99,66 -99,0 0,-1384 -1123,-2507 -2507,-2507 -66,0 -66,-100 0,-100 1384,0 2507,-1122 2507,-2506 0,-66 99,-66 99,0 0,1384 1123,2506 2507,2506zm-2557 2097c205,-1031 1016,-1842 2047,-2047 -1031,-204 -1842,-1016 -2047,-2046 -204,1030 -1016,1842 -2046,2046 1030,205 1842,1016 2046,2047z"/>
+                  <path d="M8450 2797c66,0 66,100 0,100 -538,0 -974,436 -974,974 0,65 -100,65 -100,0 0,-538 -436,-974 -974,-974 -65,0 -65,-100 0,-100 538,0 974,-436 974,-974 0,-66 100,-66 100,0 0,538 436,974 974,974zm-1024 749c105,-332 368,-594 700,-699 -332,-105 -595,-368 -700,-700 -105,333 -367,595 -699,700 332,105 594,367 699,699z"/>
+                </g>
+              </svg>
+                            
+              {/* Shine icon positioned in bottom right corner */}
+              <svg 
+                className="absolute -bottom-1 right-10 
+                          w-8 h-8 sm:w-10 sm:h-10 md:w-16 md:h-16 
+                          text-white animate-pulse" 
+                style={{ 
+                  animationDelay: '0.9s',
+                  filter: 'drop-shadow(0 0 8px #fde047) drop-shadow(0 0 16px #fde047) drop-shadow(0 0 24px #fde047)'
+                }}
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 10000 12500" 
+                fill="white"
+              >
+                <defs>
+                  <filter id="glow">
+                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                    <feMerge> 
+                      <feMergeNode in="coloredBlur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+                <g filter="url(#glow)">
+                  <path d="M6663 5570c66,0 66,100 0,100 -1384,0 -2507,1123 -2507,2507 0,66 -99,66 -99,0 0,-1384 -1123,-2507 -2507,-2507 -66,0 -66,-100 0,-100 1384,0 2507,-1122 2507,-2506 0,-66 99,-66 99,0 0,1384 1123,2506 2507,2506zm-2557 2097c205,-1031 1016,-1842 2047,-2047 -1031,-204 -1842,-1016 -2047,-2046 -204,1030 -1016,1842 -2046,2046 1030,205 1842,1016 2046,2047z"/>
+                  <path d="M8450 2797c66,0 66,100 0,100 -538,0 -974,436 -974,974 0,65 -100,65 -100,0 0,-538 -436,-974 -974,-974 -65,0 -65,-100 0,-100 538,0 974,-436 974,-974 0,-66 100,-66 100,0 0,538 436,974 974,974zm-1024 749c105,-332 368,-594 700,-699 -332,-105 -595,-368 -700,-700 -105,333 -367,595 -699,700 332,105 594,367 699,699z"/>
+                </g>
+              </svg>
+              Coming Soon
+            </h2>
+          </div>
+          {/* Underline */}
+          <div
+            className="w-20 sm:w-28 md:w-32 h-1 
+                      bg-gradient-to-r from-green-400 to-yellow-400 
+                      mx-auto rounded-full animate-pulse"
+            style={{ animationDelay: '0.9s' }}
+          />
         </div>
 
+
         {/* Subtitle with fade-in animation */}
-        <p className="text-xl md:text-2xl text-gray-300 text-center mb-16 max-w-2xl leading-relaxed animate-pulse" style={{ animationDelay: '0.5s' }}>
+        <p className="text-xl md:text-2xl text-gray-300 text-center mb-16 max-w-2xl leading-relaxed " style={{ animationDelay: '0.5s' }}>
           Empowering communities, transforming lives. Our mission to create positive change begins soon.
         </p>
 
@@ -75,11 +163,51 @@ const ComingSoon = () => {
               <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
             </svg>
           </a>
+
+          {/* LinkedIn */}
+          <a href="https://www.linkedin.com/company/suvman-foundation" 
+            target="_blank" rel="noopener noreferrer"
+            className="w-12 h-12 bg-white bg-opacity-10 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-opacity-15 transition-all duration-300 transform hover:scale-110 border border-white border-opacity-20 hover:border-green-400"
+            style={{ animationDelay: '1.3s' }}
+          >
+            <svg className="w-5 h-5" fill="green" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 
+                2.76 2.24 5 5 5h14c2.76 0 5-2.24 
+                5-5v-14c0-2.76-2.24-5-5-5zm-11 
+                19h-3v-10h3v10zm-1.5-11.27c-.97 
+                0-1.75-.79-1.75-1.76s.78-1.76 
+                1.75-1.76 1.75.79 
+                1.75 1.76-.78 1.76-1.75 
+                1.76zm13.5 11.27h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 
+                0-2.16 1.46-2.16 2.96v5.71h-3v-10h2.88v1.36h.04c.4-.76 
+                1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v5.61z"/>
+            </svg>
+          </a>
+
+          {/* YouTube */}
+          <a href="https://www.youtube.com/@SuvmanFoundation"
+            target="_blank" rel="noopener noreferrer"
+            className="w-12 h-12 bg-white bg-opacity-10 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-300 hover:text-white hover:bg-opacity-15 transition-all duration-300 transform hover:scale-110 border border-white border-opacity-20 hover:border-green-400"
+            style={{ animationDelay: '1.4s' }}
+          >
+            <svg className="w-6 h-6" fill="green" viewBox="0 0 24 24">
+              <path d="M23.498 6.186a2.966 2.966 0 0 0-2.09-2.1C19.691 
+                3.5 12 3.5 12 3.5s-7.691 0-9.408.586a2.966 
+                2.966 0 0 0-2.09 2.1A31.533 31.533 0 0 0 
+                0 12a31.533 31.533 0 0 0 .502 5.814 2.966 
+                2.966 0 0 0 2.09 2.1C4.309 20.5 12 20.5 
+                12 20.5s7.691 0 9.408-.586a2.966 2.966 0 
+                0 0 2.09-2.1A31.533 31.533 0 0 0 24 
+                12a31.533 31.533 0 0 0-.502-5.814zM9.75 
+                15.5v-7l6.5 3.5-6.5 3.5z"/>
+            </svg>
+          </a>
+
         </div>
 
         {/* Bottom text */}
         <div className="absolute bottom-8 text-center text-gray-400 text-sm">
-          <p className="animate-pulse" style={{ animationDelay: '2s' }}>
+          <p className=" text-sm md:text-base" style={{ animationDelay: '2s' }}>
             © 2025 Suvman Foundation. Building a better tomorrow, together.
           </p>
         </div>
