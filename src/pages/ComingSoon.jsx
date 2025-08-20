@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Form from './Form';
 
 const ComingSoon = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-800 via-green-900 to-emerald-900 overflow-hidden relative">
@@ -32,7 +34,7 @@ const ComingSoon = () => {
           {/* Main Title */}
           <h1
             className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl 
-                      font-extrabold leading-tight mb-1
+                      font-extrabold leading-tight
                       bg-gradient-to-r from-green-400 via-yellow-400 to-green-500 
                       bg-clip-text text-transparent animate-pulse"
             style={{ fontFamily: 'Shadows Into Light, cursive' }}
@@ -41,16 +43,21 @@ const ComingSoon = () => {
           </h1>
 
           {/* Tagline */}
-          <p
-            className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 
-                      font-semibold mt-1 py-2
-                      bg-gradient-to-r from-green-400 to-yellow-300 
-                      bg-clip-text text-transparent animate-pulse"
-            style={{ animationDelay: '0.3s' }}
+          <h3
+            className='text-lg sm:text-sm md:text-lg lg:text-xl xl:text-xl 
+            font-light mb-5 -mt-2 text-white
+            bg-clip-text text-transparent animate-pulse'
           >
-            Building a better tomorrow, together
-          </p>
-
+            Initiative By
+          </h3>
+          <h3
+            className='text-lg sm:text-sm md:text-lg lg:text-xl xl:text-3xl 
+            mb-5 -mt-4 text-white
+            bg-clip-text text-transparent animate-pulse'
+          >
+            Suvman Research & Welfare Foundation
+          </h3>
+         
           {/* Coming Soon Text */}
           <div className="relative">
             <h2
@@ -127,9 +134,29 @@ const ComingSoon = () => {
 
 
         {/* Subtitle with fade-in animation */}
-        <p className="text-xl md:text-2xl text-gray-300 text-center mb-16 max-w-2xl leading-relaxed " style={{ animationDelay: '0.5s' }}>
+        {/* <p className="text-xl md:text-2xl text-gray-300 text-center mb-16 max-w-2xl leading-relaxed " style={{ animationDelay: '0.5s' }}>
           Empowering communities, transforming lives. Our mission to create positive change begins soon.
+        </p> */}
+         <p
+          className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 
+            font-semibold mt-1 py-2 mb-5
+            text-white
+            bg-clip-text text-transparent animate-pulse"
+          style={{ animationDelay: '0.3s' }}
+        >
+          Building a better tomorrow, together
         </p>
+
+
+        {/* Contact Form Button */}
+        <button
+          onClick={() => setIsFormOpen(true)}
+          className="mb-16 px-8 py-4 bg-gradient-to-r from-green-500 to-yellow-500 hover:from-green-600 hover:to-yellow-600 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400 shadow-lg hover:shadow-xl animate-pulse"
+          style={{ animationDelay: '0.7s' }}
+        >
+          Get Updates & Connect With Us
+        </button>
+
 
         {/* Social links */}
         <div className="flex space-x-6">
@@ -206,12 +233,15 @@ const ComingSoon = () => {
         </div>
 
         {/* Bottom text */}
-        <div className="absolute bottom-8 text-center text-gray-400 text-sm">
+        <div className="absolute bottom-3 text-center text-gray-400 text-sm">
           <p className=" text-sm md:text-base" style={{ animationDelay: '2s' }}>
             © 2025 Suvman Foundation. Building a better tomorrow, together.
           </p>
         </div>
       </div>
+
+      {/* Google Form Modal */}
+      <Form isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
 
       {/* Animated gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-50 pointer-events-none" />
