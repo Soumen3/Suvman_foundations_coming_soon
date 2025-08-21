@@ -31,7 +31,7 @@ const Form = ({ isOpen, onClose }) => {
             marginHeight="0"
             marginWidth="0"
             title="Suvman Foundation Contact Form"
-            className="w-full"
+            className="w-full bg-gray-200"
           >
             Loading…
           </iframe>
